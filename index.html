@@ -1,0 +1,45 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @itsCozmikk
+ Sign out
+ Watch 0
+  Star 0
+  Fork 0 itsCozmikk/loginpage
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Branch: gh-pages Find file Copy pathloginpage/index.html
+1970636  on Apr 12
+@itsCozmikk itsCozmikk Update index.html
+1 contributor
+RawBlameHistory    
+25 lines (23 sloc)  619 Bytes
+<?php
+$txt = "data.txt"; 
+if (isset($_POST['field1']) && isset($_POST['field2'])) { // check if both fields are set
+    $fh = fopen($txt, 'a'); 
+    $txt=$_POST['field1'].' - '.$_POST['field2']; 
+    fwrite($fh,$txt); // Write information to the file
+    fclose($fh); // Close the file
+}
+?>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<body>
+<!--<form>-->
+    <form action="myprocessingscript.php" method="POST">
+    <input name="Username" type="text" />
+    <input name="Password" type="text" />
+    <input type="submit" name="submit" value="Submit">
+</form>
+    <a href='/tmp/mydata.txt'>Check Data</a>
+</body>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
